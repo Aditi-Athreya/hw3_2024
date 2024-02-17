@@ -109,13 +109,13 @@ footer{
 links in the navigation are in the hover or focus state.*/
 nav a:hover,
 nav a:focus {
-  text-decoration: underline;
+  text-decoration:wavy underline;
 }
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 .skip {
   position: absolute;
-  top: -40px; /* hidden by default */
+  top: -40px;
   left: 0;
 }
 
@@ -139,15 +139,15 @@ nav a:focus {
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-.container > :first-child {
-  grid-column: 1 / span 3;
-  background-image: url('header.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+.container > div:first-child {
+  background-image: url('../images/header.jpg');
   background-size: cover;
+  background-position: center;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  max-height: 600px;
+  overflow: hidden;
 }
-
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
@@ -201,6 +201,7 @@ first div in the grid  and place it in the grid. */
   align-items: center;
   justify-content: center;
   text-align: center;
+
 }
 
 /* Add your media query here */
@@ -210,15 +211,15 @@ first div in the grid  and place it in the grid. */
 
  
   /* Step 10: Write the selector/rule property to update the .container class */
-
+  
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
 
 
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
-
  
+
 
 
 
